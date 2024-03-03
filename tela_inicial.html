@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/script.js" defer></script>
+
+    <title>Super Mario</title>
+</head>
+
+<body>
+
+    <h1 class="nome-jogo">BEM VINDO AO <br>Jump Mario</h1>
+
+    <div class="game-form">
+        <form id="game-form" class="form">
+            <label for="username">Seu nome:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="difficulty">Dificuldade:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select><br>
+
+            <button type="submit" onclick=startButton() >Iniciar Jogo</button>
+
+        </form>
+        <img src="./src/img/mario.gif" class="mario-tela">
+        <img src="./src/img/clouds.png" class="cloud-tela">
+    </div>
+
+</body>
+
+</html>

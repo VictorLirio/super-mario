@@ -1,0 +1,172 @@
+@import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.game-form {
+    width: 50%;
+    height: 350px;
+    display: flex;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    border-radius: 5px;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.form {
+    bottom: -50px;
+    margin: 5px;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'New Super Mario Font U', sans-serif;
+
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1s infinite linear;
+    z-index: 1;
+}
+
+.pipe-medium {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+    z-index: 1;
+}
+
+.pipe-hard {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation-hard 3s infinite linear;
+    z-index: 1;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mario-tela {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mario-jump {
+    animation: mario-jump 500ms ease-out;
+
+}
+
+.cloud {
+    position: absolute;
+    width: 550px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.cloud-tela {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 550px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.mario-theme {
+    position: absolute;
+}
+
+.score {
+    position: absolute;
+    font-size: 20px;
+    right: 800px;
+}
+
+
+.nome-jogo {
+    margin: 3.5rem 0;
+    text-align: center;
+    font-family: 'New Super Mario Font U', sans-serif;
+
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation-hard {
+    from {
+        right: -80px;
+        bottom: 40px;
+    }
+
+    to {
+        right: 100%;
+        bottom: 80px;
+    }
+}
+
+@keyframes mario-jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 160px;
+    }
+
+    50% {
+        bottom: 160px;
+    }
+
+    60% {
+        bottom: 160px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes cloud-animation {
+    0% {
+        right: -550px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
